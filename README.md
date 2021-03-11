@@ -1,4 +1,4 @@
-#Mic-Face
+# Mic-Face
 
 Realtime audio visualization using microphone. Made for puppet jam.
 
