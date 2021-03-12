@@ -14,10 +14,12 @@ class AudioAnalyser extends Component {
 
     this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
     this.analyser = this.audioContext.createAnalyser();
+    //analyser variables
     this.analyser.minDecibels = -50;
     this.analyser.maxDecibels = -10;
     this.analyser.smoothingTimeConstant = 1;
     this.analyser.fftSize = 64;
+    
     this.dataArray = new Uint8Array(this.analyser.frequencyBinCount);
     this.source = this.audioContext.createMediaStreamSource(this.props.audio);
     this.source.connect(this.analyser);

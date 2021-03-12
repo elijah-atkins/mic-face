@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AudioAnalyser from './AudioAnalyser';
-import eye from "./assets/img/eye.png"
+
 
 class App extends Component {
   constructor(props) {
@@ -43,10 +43,11 @@ class App extends Component {
         <div className="spacer"></div>
         <div className="eyes">
           <div className="r-eye">
-          <img src={eye} alt="right eye"></img>
+<br></br>
           </div>
+          <div className="spacer"></div>
           <div className="l-eye">
-          <img src={eye} alt="left-eye"></img>
+          <br></br>
           </div>
         </div>
         {this.state.audio ? <AudioAnalyser audio={this.state.audio} /> : ''}

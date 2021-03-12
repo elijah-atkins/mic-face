@@ -22,7 +22,30 @@ header {
   display: flex;
   justify-content: space-around;
 }
-
+.r-eye {
+  width: 350px;
+  height: 250px;
+  float: left;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-animation: blink 7s infinite;
+  animation: blink 7s infinite;
+  -webkit-animation-timing-function: steps(1, end);
+  animation-timing-function: steps(1, end);
+}
+.l-eye {
+  width: 350px;
+  height: 250px;
+  float: left;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-animation: blink 7s infinite;
+  animation: blink 7s infinite;
+  -webkit-animation-timing-function: steps(1, end);
+  animation-timing-function: steps(1, end);
+}
 main {
   height: 200vh;
   background: #000;
@@ -43,4 +66,18 @@ footer {
   background: #333e5a;
   color: #fff;
   text-align: center;
+}
+@keyframes blink {
+  0% {
+    background-image: url(/src/assets/img/eye-00.svg);
+  }
+  97% {
+    background-image: url(/src/assets/img/eye-01.svg);
+  }
+  98% {
+    background-image: url(/src/assets/img/eye-03.svg);
+  }
+  100% {
+    background-image: url(/src/assets/img/eye-02.svg);
+  }
 }
