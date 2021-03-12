@@ -16,15 +16,15 @@ header {
   text-align: center;
 }
 .spacer {
-  height: 2rem;
+  height: 20vh;
 }
 .eyes {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 main {
-  height: 110vh;
+  height: 200vh;
   background: #000;
 }
 main .controls {
