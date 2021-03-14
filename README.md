@@ -11,7 +11,11 @@ Load deployed site at [Mic-Face](https://mic-face.elijahatkins.com/). Click "Get
 * Try it with multiple devices
 
 ## Tutorials used
+The mouth visualization uses React and the Web Audio API. The following link was a great introduction to the Web Audio API. 
+
 [Audio visualization with Web Audio API and React](https://www.twilio.com/blog/audio-visualisation-web-audio-api--react)
+
+[GitHub](https://github.com/philnash/react-web-audio.git)
 
 ## Getting Started with Create React App
 
