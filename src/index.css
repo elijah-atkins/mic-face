@@ -18,34 +18,6 @@ header {
 .spacer {
   height: 20vh;
 }
-.eyes {
-  display: flex;
-  justify-content: space-around;
-}
-.r-eye {
-  width: 350px;
-  height: 250px;
-  float: left;
-  background-size: contain;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  -webkit-animation: blink 7s infinite;
-  animation: blink 7s infinite;
-  -webkit-animation-timing-function: steps(1, end);
-  animation-timing-function: steps(1, end);
-}
-.l-eye {
-  width: 350px;
-  height: 250px;
-  float: left;
-  background-size: contain;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  -webkit-animation: blink 7s infinite;
-  animation: blink 7s infinite;
-  -webkit-animation-timing-function: steps(1, end);
-  animation-timing-function: steps(1, end);
-}
 main {
   height: 200vh;
   background: #000;
@@ -67,17 +39,49 @@ footer {
   color: #fff;
   text-align: center;
 }
+/* 
+Container for eyes
+*/
+.eyes {
+  display: flex;
+  justify-content: space-around;
+}
+/* 
+container for blink animation sets the size and postion for eyes 
+*/
+.eye {
+  width: 250px;
+  height: 250px;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  /* 
+animation set for 7 seconds adjust second value in animation 
+*/
+  animation: blink 7s infinite;
+  animation-timing-function: steps(1, end);
+}
+/* 
+Blink keyframes eye-00 is the open eye and holds for most of the animation then cycles though the blink animation keyframes
+timing can be adjusted here
+*/
 @keyframes blink {
   0% {
     background-image: url(/src/assets/img/eye-00.svg);
   }
-  97% {
-    background-image: url(/src/assets/img/eye-01.svg);
+  95% {
+    background-image: url(/src/assets/img/eye-02.svg);
   }
-  98% {
+  96% {
     background-image: url(/src/assets/img/eye-03.svg);
   }
-  100% {
+  98% {
     background-image: url(/src/assets/img/eye-02.svg);
+  }
+  99% {
+    background-image: url(/src/assets/img/eye-01.svg);
+  }
+  100% {
+    background-image: url(/src/assets/img/eye-00.svg);
   }
 }
