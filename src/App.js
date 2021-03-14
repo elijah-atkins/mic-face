@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import AudioAnalyser from './AudioAnalyser';
-
+import React, { Component } from "react";
+import AudioAnalyser from "./AudioAnalyser";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      audio: null
+      audio: null,
     };
     this.toggleMicrophone = this.toggleMicrophone.bind(this);
   }
@@ -14,13 +13,13 @@ class App extends Component {
   async getMicrophone() {
     const audio = await navigator.mediaDevices.getUserMedia({
       audio: true,
-      video: false
+      video: false,
     });
     this.setState({ audio });
   }
 
   stopMicrophone() {
-    this.state.audio.getTracks().forEach(track => track.stop());
+    this.state.audio.getTracks().forEach((track) => track.stop());
     this.setState({ audio: null });
   }
 
@@ -37,20 +36,17 @@ class App extends Component {
       <div className="App">
         <div className="controls">
           <button onClick={this.toggleMicrophone}>
-            {this.state.audio ? 'Stop microphone' : 'Get microphone input'}
+            {this.state.audio ? "Stop microphone" : "Get microphone input"}
           </button>
         </div>
         <div className="spacer"></div>
         <div className="eyes">
-          <div className="r-eye">
-<br></br>
-          </div>
-          <div className="spacer"></div>
-          <div className="l-eye">
-          <br></br>
+          <div className="eye"></div>
+          <div className="eye">
+            <br></br>
           </div>
         </div>
-        {this.state.audio ? <AudioAnalyser audio={this.state.audio} /> : ''}
+        {this.state.audio ? <AudioAnalyser audio={this.state.audio} /> : ""}
       </div>
     );
   }
