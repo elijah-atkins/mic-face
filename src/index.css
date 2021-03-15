@@ -5,15 +5,8 @@ body {
   display: grid;
   background: #333e5a;
 }
-
 a {
   color: #fff;
-}
-
-header {
-  background: #f0293e;
-  color: #fff;
-  text-align: center;
 }
 .spacer {
   height: 20vh;
@@ -39,31 +32,9 @@ footer {
   color: #fff;
   text-align: center;
 }
-/* 
-Container for eyes
-*/
-.eyes {
-  display: flex;
-  justify-content: space-around;
-}
-/* 
-container for blink animation sets the size and position for eyes 
-*/
-.eye {
-  width: 250px;
-  height: 250px;
-  background-size: contain;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  /* 
-animation set for 7 seconds adjust second value in animation 
-*/
-  animation: blink 7s infinite;
-  animation-timing-function: steps(1, end);
-}
-/* 
-Blink keyframes eye-00 is the open eye and holds for most of the animation then cycles though the blink animation keyframes
-timing can be adjusted here
+
+/*
+Animations
 */
 @keyframes blink {
   0% {
