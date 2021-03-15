@@ -15,7 +15,7 @@ class AudioAnalyser extends Component {
     this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
     this.analyser = this.audioContext.createAnalyser();
     //analyser variables
-    this.analyser.minDecibels = -90;
+    this.analyser.minDecibels = -80;
     this.analyser.maxDecibels = -10;
     this.analyser.smoothingTimeConstant = 1;
     this.analyser.fftSize = 64;

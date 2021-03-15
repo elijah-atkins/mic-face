@@ -47,7 +47,7 @@ Container for eyes
   justify-content: space-around;
 }
 /* 
-container for blink animation sets the size and postion for eyes 
+container for blink animation sets the size and position for eyes 
 */
 .eye {
   width: 250px;
@@ -70,7 +70,7 @@ timing can be adjusted here
     background-image: url(/src/assets/img/eye-00.svg);
   }
   95% {
-    background-image: url(/src/assets/img/eye-02.svg);
+    background-image: url(/src/assets/img/eye-01.svg);
   }
   96% {
     background-image: url(/src/assets/img/eye-03.svg);
